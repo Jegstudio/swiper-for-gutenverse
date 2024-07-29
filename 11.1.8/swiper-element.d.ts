@@ -70,9 +70,6 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
    * Event will be fired on draggable scrollbar drag end
    */
   scrollbardragend: CustomEvent<[swiper: Swiper, event: MouseEvent | TouchEvent | PointerEvent]>;/**
-   * Event will be fired on zoom change
-   */
-  zoomchange: CustomEvent<[swiper: Swiper, scale: number, imageEl: HTMLElement, slideEl: HTMLElement]>;/**
    * Event will be fired after pagination rendered
    */
   paginationrender: CustomEvent<[swiper: Swiper, paginationEl: HTMLElement]>;
@@ -90,7 +87,10 @@ interface SwiperContainerEventMap extends Omit<HTMLElementEventMap, 'click' | 'p
   /**
    * Event will be fired on pagination show
    */
-  paginationshow: CustomEvent<[swiper: Swiper]>;
+  paginationshow: CustomEvent<[swiper: Swiper]>;/**
+   * Event will be fired on zoom change
+   */
+  zoomchange: CustomEvent<[swiper: Swiper, scale: number, imageEl: HTMLElement, slideEl: HTMLElement]>;
 
   
   /**

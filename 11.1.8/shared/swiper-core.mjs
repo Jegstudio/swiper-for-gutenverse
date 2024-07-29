@@ -1398,6 +1398,9 @@ function slideTo(index, speed, runCallbacks, internal, initial) {
   if (typeof speed === 'undefined') {
     speed = swiper.params.speed;
   }
+  if (swiper.params.slidesPerGroupSkip === undefined) {
+    return false;
+  }
   const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
   let snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
   if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
